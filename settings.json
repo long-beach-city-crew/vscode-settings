@@ -1,0 +1,243 @@
+{
+  //
+  // General settings
+  //
+  // Editor settings
+  "editor.fontFamily": "Lilex Nerd Font", // Sets the editor font. Nerd Font variant enables glyphs/icons (useful for prompts, trees, powerline).
+  "editor.fontSize": 15, // Controls editor text size (in pixels).
+  "editor.fontWeight": "400", // Normal font weight. Prevents overly bold rendering common with monospace fonts.
+  "editor.tabSize": 4, // Defines indentation width. Matches Python, Go, and many infrastructure standards.
+  "editor.formatOnSave": true, // Automatically formats files when saved using the active formatter.
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Sets Prettier as the global formatter (overridden per-language later).
+  "editor.quickSuggestionsDelay": 200, // Delay (ms) before IntelliSense suggestions appear. Reduces noise while typing.
+  "editor.dragAndDrop": false, // Disables drag-and-drop text movement to prevent accidental edits.
+  "editor.minimap.enabled": false, // Disables the minimap for a cleaner UI and slightly lower memory usage.
+  "editor.inlayHints.enabled": "on", // Enables inline type hints, parameter names, etc. (language-server dependent).
+  "editor.fontLigatures": false, // Enables ligatures like !=, ->, => for supported fonts.
+  "editor.inlayHints.fontFamily": "Lilex Nerd Font", // Ensures inlay hints use the same font as code (visual consistency).
+  "editor.inlineSuggest.fontFamily": "Lilex Nerd Font", // Font used for inline (ghost-text) suggestions.
+  //
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "keyword",
+          "keyword.control",
+          "storage.type",
+          "storage.modifier",
+        ],
+        "settings": { "foreground": "#9D70FF", "fontStyle": "italic" },
+      },
+      {
+        "scope": ["entity.name.function", "support.function"],
+        "settings": { "foreground": "#BCBEC4" },
+      },
+      {
+        "scope": [
+          "variable.language.special.self.python",
+          "variable.language.special.cls.python",
+          "variable.parameter.function.language.special.self.python",
+          "variable.parameter.function.language.special.cls.python",
+          "support.type.python",
+          "constant.language.python",
+        ],
+        "settings": { "foreground": "#CBA08C" },
+      },
+      {
+        "scope": "meta.attribute.python",
+        "settings": { "foreground": "#C193BA" },
+      },
+      {
+        "scope": "entity.name.type.class.python",
+        "settings": { "foreground": "#93B6BE" },
+      },
+      {
+        "scope": "entity.name.function.target.makefile",
+        "settings": { "foreground": "#CBA08C" },
+      },
+      //support.function.builtin.shell
+      {
+        "scope": "support.function.builtin.shell",
+        "settings": { "foreground": "#c7be73" },
+      },
+      // entity.name.command.shell
+      {
+        "scope": "entity.name.command.shell",
+        "settings": { "foreground": "#93B6BE" },
+      },
+    ],
+  },
+
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "module:python": "#BCBEC4",
+      "class:python": "#93B6BE",
+      "class.defaultLibrary:python": "#93B6BE",
+      "variable.builtin:python": "#93B6BE",
+      "variable": "#c190b3",
+      "parameter:python": "#D4D4D4",
+      "selfParameter:python": "#CBA08C",
+      "clsParameter:python": "#CBA08C",
+      "magicFunction:python": "#BCBEC4",
+    },
+  },
+
+  "editor.bracketPairColorization.enabled": false,
+  // Debuger settings
+  "debug.console.fontFamily": "Lilex Nerd Font", // Sets a distinct font for the debug console.
+  "debug.console.fontSize": 13, // Larger text for readability during debugging.
+  // Terminal settings
+  "terminal.integrated.fontFamily": "Lilex Nerd Font", // Terminal font matches editor (important for glyph alignment).
+  "terminal.integrated.fontSize": 14, // Terminal text si
+  "terminal.integrated.fontWeight": "500", // Slightly bolder terminal text for contrast.
+  // Window / Workbench
+  "window.zoomLevel": 0, // Controls file and UI icons.
+  "workbench.settings.openDefaultSettings": false, // Opens settings.json instead of GUI by default.
+  "workbench.settings.editor": "json", // Forces JSON editor for settings.
+  "workbench.startupEditor": "none", // Prevents welcome page from opening on startup.
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false, // Always uses side-by-side diffs, even in narrow windows.
+  // Live Server / Git
+  "liveServer.settings.donotShowInfoMsg": true, // Suppresses Live Server startup notifications.
+  "liveServer.settings.donotVerifyTags": true, // Disables HTML tag validation warnings.
+  "git.openRepositoryInParentFolders": "never", // Prevents VS Code from auto-detecting parent Git repos (important for mono-repos).
+  "git.suggestSmartCommit": false, // Disables Git smart commit suggestions.
+  "git.confirmSync": false, // Disables confirmation when syncing Git repositories.
+  //
+  // Python settings
+  //
+  "python.defaultInterpreterPath": "C:\\Program Files\\Python314\\python.exe", // Defines the default Python interpreter.
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff", // Uses Ruff as the Python formatter (fast, opinionated).
+    "editor.formatOnSave": true, // Formats Python files automatically on save.
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit", // Only organizes imports when explicitly requested (not every save).
+    },
+  },
+  "python.analysis.inlayHints.variableTypes": true, // Shows inferred variable types inline.
+  "python.analysis.inlayHints.functionReturnTypes": true, // Shows inferred function return types inline.
+  "python.analysis.typeCheckingMode": "basic", // Enables strict static type checking (Unknown is forbidden, generics enforced).
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  //
+  // Telemetry / Security
+  //
+  "redhat.telemetry.enabled": false, // Disables telemetry from Red Hat extensions.
+  "security.workspace.trust.untrustedFiles": "open", // Allows opening untrusted files without prompts.
+  //
+  // Formatter
+  //
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for HTML.
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for CSS.
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features", // Uses built-in TS/JS formatter instead of Prettier.
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for JSON.
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for React JSX.
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Formatter for JSON with comments.
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers", // Formatter for Dockerfile with comments.
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell", // Formatter for ps1 with comments.
+  },
+  "[grafana-alloy]": {
+    "editor.defaultFormatter": "Grafana.grafana-alloy", // Formatter for Grafana Alloy (example config.alloy) configuration files.
+  },
+  //
+  // Spell Check
+  //
+  "cSpell.enabledFileTypes": {
+    "dockerfile": true,
+  },
+  "cSpell.language": "en",
+  //
+  // File associations / Emmet
+  //
+  "files.associations": {
+    "*.html": "html",
+    "*.htm": "html",
+  },
+  "emmet.includeLanguages": {
+    "html": "html",
+    "django-html": "html",
+  },
+  "emmet.triggerExpansionOnTab": true,
+  //
+  // User dictionary (cSpell)
+  //
+  "cSpell.userWords": [
+    "init",
+    "eq",
+    "archlinux",
+    "bashism",
+    "ceni",
+    "checkbashisms",
+    "crossfit",
+    "cyberjunky",
+    "devpod",
+    "doas",
+    "dotenv",
+    "fontconfig",
+    "garminconnect",
+    "gethomepage",
+    "gitops",
+    "gtpl",
+    "LASTEXITCODE",
+    "letsdoautomation",
+    "levelname",
+    "LOCALBINFOLDER",
+    "makepkg",
+    "markscribe",
+    "marticliment",
+    "nanorc",
+    "netsh",
+    "noconfirm",
+    "openmediavault",
+    "PACKAGEMANAGER",
+    "pacman",
+    "paru",
+    "pnputil",
+    "Pytest",
+    "shekeriev",
+    "shellcheck",
+    "shellchek",
+    "sredni",
+    "startpage",
+    "stefanzweifel",
+    "tonytech",
+    "UNDCERLINE",
+    "venv",
+    "wakatime",
+    "winget",
+    "wods",
+    "zinit",
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dark+",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "makefile.configureOnOpen": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+  },
+  "[go.mod]": {
+    "editor.defaultFormatter": "golang.go",
+  },
+}
