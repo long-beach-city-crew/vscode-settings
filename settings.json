@@ -4,7 +4,7 @@
   //
   // Editor settings
   "editor.fontFamily": "Lilex Nerd Font", // Sets the editor font. Nerd Font variant enables glyphs/icons (useful for prompts, trees, powerline).
-  "editor.fontSize": 15, // Controls editor text size (in pixels).
+  "editor.fontSize": 14, // Controls editor text size (in pixels).
   "editor.fontWeight": "400", // Normal font weight. Prevents overly bold rendering common with monospace fonts.
   "editor.tabSize": 4, // Defines indentation width. Matches Python, Go, and many infrastructure standards.
   "editor.formatOnSave": true, // Automatically formats files when saved using the active formatter.
@@ -28,60 +28,106 @@
         ],
         "settings": { "foreground": "#9D70FF", "fontStyle": "italic" },
       },
-      {
-        "scope": ["entity.name.function", "support.function"],
-        "settings": { "foreground": "#BCBEC4" },
-      },
-      {
-        "scope": [
-          "variable.language.special.self.python",
-          "variable.language.special.cls.python",
-          "variable.parameter.function.language.special.self.python",
-          "variable.parameter.function.language.special.cls.python",
-          "support.type.python",
-          "constant.language.python",
-        ],
-        "settings": { "foreground": "#CBA08C" },
-      },
-      {
-        "scope": "meta.attribute.python",
-        "settings": { "foreground": "#C193BA" },
-      },
-      {
-        "scope": "entity.name.type.class.python",
-        "settings": { "foreground": "#93B6BE" },
-      },
-      {
-        "scope": "entity.name.function.target.makefile",
-        "settings": { "foreground": "#CBA08C" },
-      },
-      //support.function.builtin.shell
-      {
-        "scope": "support.function.builtin.shell",
-        "settings": { "foreground": "#c7be73" },
-      },
-      // entity.name.command.shell
-      {
-        "scope": "entity.name.command.shell",
-        "settings": { "foreground": "#93B6BE" },
-      },
+      // {
+      //   "scope": ["entity.name.function", "support.function"],
+      //   "settings": { "foreground": "#BCBEC4" },
+      // },
+      // // {
+      // //   "scope": [
+      // //     "variable.language.special.self.python",
+      // //     "variable.language.special.cls.python",
+      // //     "variable.parameter.function.language.special.self.python",
+      // //     "variable.parameter.function.language.special.cls.python",
+      // //     "support.type.python",
+      // //     "constant.language.python",
+      // //   ],
+      // //   "settings": { "foreground": "#CBA08C" },
+      // // },
+      // {
+      //   "scope": "meta.attribute.python",
+      //   "settings": { "foreground": "#C193BA" },
+      // },
+      // {
+      //   "scope": "entity.name.function.target.makefile",
+      //   "settings": { "foreground": "#CBA08C" },
+      // },
+      // //support.function.builtin.shell
+      // {
+      //   "scope": "support.function.builtin.shell",
+      //   "settings": { "foreground": "#c7be73" },
+      // },
+      // // entity.name.command.shell
+      // {
+      //   "scope": "entity.name.command.shell",
+      //   "settings": { "foreground": "#93B6BE" },
+      // },
+      // // entity.name.function.decorator.python
+      // {
+      //   "scope": "entity.name.function.decorator.python",
+      //   "settings": { "foreground": "#d4df6f" },
+      // },
+      // // meta.function.decorator.python
+      // {
+      //   "scope": "meta.function.decorator.python",
+      //   "settings": { "foreground": "#d4df6f" },
+      // },
+      // // string.quoted.docstring.multi.python
+      // {
+      //   "scope": "string.quoted.docstring.multi.python",
+      //   "settings": { "foreground": "#747b84" },
+      // },
+      // // comment.line.number-sign.python
+      // {
+      //   "scope": "comment.line.number-sign.python",
+      //   "settings": { "foreground": "#747b84" },
+      // },
+      // // string.quoted.single.python
+      // {
+      //   "scope": "string.quoted.single.python",
+      //   "settings": { "foreground": "#7aa87c" },
+      // },
+      // // constant.character.format.placeholder.other.python
+      // {
+      //   "scope": "constant.character.format.placeholder.other.python",
+      //   "settings": { "foreground": "#91fa8f" },
+      // },
+      // {
+      //   "scope": [
+      //     "meta.member.access.python",
+      //     "meta.function-call.arguments.python",
+      //   ],
+      //   "settings": { "foreground": "#ff6b6b" },
+      // },
+      // // "meta.function-call.python"
+      // {
+      //   "scope": "meta.function-call.python",
+      //   "settings": { "foreground": "#554fff" },
+      // },
+      // // constant.numeric.dec.python
+      // {
+      //   "scope": "constant.numeric.dec.python",
+      //   "settings": { "foreground": "#d45a5a" },
+      // },
     ],
   },
 
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": true,
-    "rules": {
-      "module:python": "#BCBEC4",
-      "class:python": "#93B6BE",
-      "class.defaultLibrary:python": "#93B6BE",
-      "variable.builtin:python": "#93B6BE",
-      "variable": "#c190b3",
-      "parameter:python": "#D4D4D4",
-      "selfParameter:python": "#CBA08C",
-      "clsParameter:python": "#CBA08C",
-      "magicFunction:python": "#BCBEC4",
-    },
-  },
+  // "editor.semanticTokenColorCustomizations": {
+  //   "enabled": true,
+  //   "rules": {
+  //     "module:python": "#BCBEC4",
+  //     "class:python": "#81c8e3",
+  //     "class.defaultLibrary:python": "#93B6BE",
+  //     "parameter:python": "#d45a5a",
+  //     "parameter.keywordArgument:python": "#d45a5a",
+  //     "selfParameter:python": "#CBA08C",
+  //     "clsParameter:python": "#CBA08C",
+  //     "magicFunction:python": "#BCBEC4",
+  //     // matches token 1: plain variable, any modifiers
+  //     "variable:python": "#BCBEC4",
+  //     // matches token 2: variable with classMember modifier specifically
+  //     "variable.readwrite:python": "#FF6B6B",
+  //   },
+  // },
 
   "editor.bracketPairColorization.enabled": false,
   // Debuger settings
@@ -90,7 +136,7 @@
   // Terminal settings
   "terminal.integrated.fontFamily": "Lilex Nerd Font", // Terminal font matches editor (important for glyph alignment).
   "terminal.integrated.fontSize": 14, // Terminal text si
-  "terminal.integrated.fontWeight": "500", // Slightly bolder terminal text for contrast.
+  "terminal.integrated.fontWeight": "400", // Slightly bolder terminal text for contrast.
   // Window / Workbench
   "window.zoomLevel": 0, // Controls file and UI icons.
   "workbench.settings.openDefaultSettings": false, // Opens settings.json instead of GUI by default.
@@ -129,6 +175,7 @@
   //
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for HTML.
+    "editor.formatOnSave": false,
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier for CSS.
@@ -154,6 +201,10 @@
   "[grafana-alloy]": {
     "editor.defaultFormatter": "Grafana.grafana-alloy", // Formatter for Grafana Alloy (example config.alloy) configuration files.
   },
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+  },
   //
   // Spell Check
   //
@@ -161,6 +212,7 @@
     "dockerfile": true,
   },
   "cSpell.language": "en",
+  "cSpell.ignoreRegExpList": ["__\\w+__"],
   //
   // File associations / Emmet
   //
@@ -177,22 +229,24 @@
   // User dictionary (cSpell)
   //
   "cSpell.userWords": [
-    "init",
-    "eq",
     "archlinux",
     "bashism",
+    "blackbox",
     "ceni",
     "checkbashisms",
     "crossfit",
     "cyberjunky",
+    "deepseek",
     "devpod",
     "doas",
     "dotenv",
+    "eq",
     "fontconfig",
     "garminconnect",
     "gethomepage",
     "gitops",
     "gtpl",
+    "init",
     "LASTEXITCODE",
     "letsdoautomation",
     "levelname",
@@ -203,6 +257,7 @@
     "nanorc",
     "netsh",
     "noconfirm",
+    "ollama",
     "openmediavault",
     "PACKAGEMANAGER",
     "pacman",
@@ -223,8 +278,6 @@
     "wods",
     "zinit",
   ],
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dark+",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "security.allowedUNCHosts": ["wsl.localhost"],
   "makefile.configureOnOpen": true,
@@ -240,4 +293,9 @@
   "[go.mod]": {
     "editor.defaultFormatter": "golang.go",
   },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+  },
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
 }
